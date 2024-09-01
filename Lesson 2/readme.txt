@@ -1,0 +1,3 @@
+Implementation with virtual top and bottom sites gives backwashing error (when system percolates isFull() returns true for the sites, that are connected just to the bottom, but not to the top).
+
+So this solution prevents this error from happening, as it introduces new states: TOP and BOTTOM. They show if the site is connected to TOP row and to the BOTTOM row. This is checked on each site oppening. At the moment newly opened site becomes TOP and BOTTOM at the same time - system percolates.
